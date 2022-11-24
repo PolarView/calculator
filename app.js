@@ -69,13 +69,12 @@ class Calculator {
       this.currentOperand = '';
       this.operator = operator;
     }
-    if (this.previousOperand === '' && this.currentOperand !== '')
-      if (this.operator !== '' && this.currentOperand !== '') {
-        this.compute();
-        this.previousOperand = this.currentOperand;
-        this.currentOperand = '';
-        this.operator = operator;
-      }
+    if (this.operator !== '' && this.currentOperand !== '') {
+      this.compute();
+      this.previousOperand = this.currentOperand;
+      this.currentOperand = '';
+      this.operator = operator;
+    }
   }
 }
 
@@ -102,6 +101,7 @@ resetButton.addEventListener('click', () => {
 
 equalButton.addEventListener('click', () => {
   calc.compute();
+
   calc.updateDisplay();
 });
 
