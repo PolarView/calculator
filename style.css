@@ -59,3 +59,8 @@ body {
 .output-box .current-operand {
   font-size: 2rem;
 }
+
+.output-box .current-operator {
+  font-size: 1rem;
+  color: #d8d8ae;
+}
